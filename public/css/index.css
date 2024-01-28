@@ -1,36 +1,109 @@
 .task1 .item {
+  position: relative;
+  top: 150px; /* Move 150px down */
+  left: 200px; /* Move 200px to the right */
+}
+.task2 {
+  position: relative;
 }
 
 .task2 .item {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.task3 {
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .task3 .item {
+  /* Add your styles for the item here */
 }
-
 .container4 {
 }
 
 .task4 {
   width: 1000px;
+  position: relative;
+  height: 200px; /* Set the height of the container as needed */
+  overflow: auto; /* Enable scrolling within the container */
 }
 .task4 .item {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
-
+.task5 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 200px; /* Set the height of the container as needed */
+}
 .task5 .item1 {
   background-color: red;
+  width: 80px;
+  height: 80px;
+  background-color: #3498db; /* Set the background color as needed */
 }
 .task5 .item2 {
+  border-radius: 50% 0 0 50%;
 }
 .task5 .item3 {
   background-color: green;
+  border-radius: 0 50% 50% 0;
 }
-
+.task6 {
+  display: flex;
+  align-items: flex-start;
+}
 .task6 .item {
+  width: 80px;
+  height: 80px;
+  background-color: #3498db; /* Set the background color as needed */
+  margin-right: 10px; /* Adjust the margin as needed for spacing between item and text */
 }
-
+.task6 p {
+  flex: 1;
+}
+.task7 {
+  display: flex;
+  align-items: flex-start;
+}
 .task7 .item {
+  width: 80px;
+  height: 80px;
+  background-color: #3498db; /* Set the background color as needed */
+  margin-left: 10px; /* Adjust the margin as needed for spacing between item and text */
+}
+.task7 p {
+  margin-left: auto;
+}
+.task8 {
+  overflow: hidden; /* Prevents the content from overflowing */
+}
+.task8 .item,
+.task8 p {
+  float: left; /* Floats the items and paragraphs to the left */
 }
 
+.task8 .elem {
+  clear: both; /* Clears the float, preventing wrapping around floated elements */
+}
 .task8 .item1 {
 }
 .task8 .item2 {
@@ -39,7 +112,19 @@
 
 .task8 p {
 }
+.task9 {
+  overflow: hidden; /* Prevents the content from overflowing */
+}
 
+.task9 .item,
+.task9 p {
+  float: left; /* Floats the items and paragraphs to the left */
+}
+
+.task9 .elem {
+  display: block;
+  clear: right; /* Clears the float on the right side, preventing wrapping */
+}
 .task9 .item1 {
   height: 200px;
 }
@@ -47,72 +132,168 @@
 }
 .task9 p {
 }
+.task10 {
+  overflow: hidden; /* Prevents the content from overflowing */
+}
 
+.task10 .item,
+.task10 p {
+  float: right; /* Floats the items and paragraphs to the right */
+}
+
+.task10 .elem {
+  display: block;
+  clear: left; /* Clears the float on the left side, preventing wrapping */
+}
 .task10 .item1 {
 }
 .task10 .item2 {
 }
 .task10 p {
 }
-
+.task11 {
+  width: 100%; /* Make the container take the full width of its parent */
+  height: auto; /* Allow the height to adjust based on the aspect ratio */
+  overflow: hidden; /* Ensure that the image doesn't overflow the container */
+}
 .task11 .img-item {
   height: 100%;
   width: 100%;
+  display: block;
 }
-
+.task12 {
+  width: 100%; /* Make the container take the full width of its parent */
+  height: 300px; /* Set a fixed height for the container */
+  overflow: hidden; /* Ensure that the image doesn't overflow the container */
+  position: relative; /* Establish positioning context for absolute positioning */
+}
 .task12 .img-item {
   height: 100%;
   width: 100%;
+  object-fit: cover; /* Enlarge or shrink the image while maintaining aspect ratio */
+  object-position: center; /* Center the image within the container */
+  display: block; /* Remove any extra space below the image */
 }
-
+.task13 {
+  width: 100%; /* Make the container take the full width of its parent */
+  height: 300px; /* Set a fixed height for the container */
+  overflow: hidden; /* Ensure that the image doesn't overflow the container */
+  position: relative; /* Establish positioning context for absolute positioning */
+}
 .task13 .img-item {
-  height: 100%;
-  width: 100%;
+  width: 100%; /* Make the image take the full width of the container */
+  height: 100%; /* Make the image take the full height of the container */
+  object-fit: fill; /* Stretch the image to fill the entire container */
+  display: block; /* Remove any extra space below the image */
 }
-
+.task14 {
+  width: 100%; /* Make the container take the full width of its parent */
+  height: 300px; /* Set a fixed height for the container */
+  overflow: hidden; /* Ensure that the image doesn't overflow the container */
+  position: relative; /* Establish positioning context for absolute positioning */
+}
 .task14 .img-item {
   height: 100%;
   width: 100%;
+  max-width: 100%; /* Ensure the image doesn't exceed the width of its natural size */
+  display: block; /* Remove any extra space below the image */
 }
-
+.task15 {
+  width: 100%; /* Make the container take the full width of its parent */
+  height: 300px; /* Set a fixed height for the container */
+  display: flex; /* Use flexbox for centering */
+  justify-content: flex-end; /* Align items to the end (right) of the container */
+  align-items: center; /* Center items vertically */
+  overflow: hidden; /* Ensure that the image doesn't overflow the container */
+  position: relative; /* Establish positioning context for absolute positioning */
+}
 .task15 .img-item {
   height: 100%;
   width: 100%;
   object-fit: none;
+  max-height: 100%; /* Make the image take the full height of the container */
+  max-width: 100%; /* Make the image take the full width of the container */
+  display: block; /* Remove any extra space around the image */
 }
-
+.task16 {
+  width: 100%; /* Make the container take the full width of its parent */
+  height: 300px; /* Set a fixed height for the container */
+  position: relative; /* Establish positioning context for absolute positioning */
+  overflow: hidden; /* Ensure that the image doesn't overflow the container */
+}
 .task16 .img-item {
   height: 100%;
   width: 100%;
   object-fit: none;
+  position: absolute; /* Position the image absolutely within the container */
+  top: 0; /* Align the top edge of the image to the top edge of the container */
+  left: 0; /* Align the left edge of the image to the left edge of the container */
+  display: block; /* Remove any extra space around the image */
 }
-
+.task17 {
+  width: 100%; /* Make the container take the full width of its parent */
+  height: 300px; /* Set a fixed height for the container */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center items horizontally */
+  align-items: flex-end; /* Align items to the end (bottom) of the container */
+  overflow: hidden; /* Ensure that the image doesn't overflow the container */
+  position: relative; /* Establish positioning context for absolute positioning */
+}
 .task17 .img-item {
   height: 100%;
   width: 100%;
   object-fit: none;
+  display: block; /* Remove any extra space around the image */
 }
-
+.task18 {
+  width: 100%; /* Make the container take the full width of its parent */
+  height: 300px; /* Set a fixed height for the container */
+  position: relative; /* Establish positioning context for absolute positioning */
+  overflow: hidden; /* Ensure that the image doesn't overflow the container */
+}
 .task18 .img-item {
   height: 100%;
   width: 100%;
   object-fit: none;
+  position: absolute; /* Position the image absolutely within the container */
+  top: 25px; /* Move the image 25px down from the top edge of the container */
+  left: 40px; /* Move the image 40px from the left edge of the container */
+  max-height: calc(
+    100% - 25px
+  ); /* Make the image take the full height of the container, accounting for top offset */
+  max-width: calc(
+    100% - 40px
+  ); /* Make the image take the full width of the container, accounting for left offset */
+  display: block; /* Remove any extra space around the image */
 }
-
+.task19 {
+  width: 100%; /* Make the container take the full width of its parent */
+  height: 300px; /* Set a fixed height for the container */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  overflow: hidden; /* Ensure that the image doesn't overflow the container */
+  position: relative; /* Establish positioning context for absolute positioning */
+}
 .task19 .img-item {
   height: 100%;
   width: 100%;
   object-fit: none;
+  display: block;
 }
 
 .task20 {
+  user-select: none; /* Prevent text selection within the element */
 }
 
 .task21 {
+  user-select: all; /* Enable text selection for all child elements */
 }
 
 .task22 {
+  caret-color: blue; /* Set the caret color to blue for text input elements */
 }
 
 html {
+  scroll-behavior: smooth;
 }
